@@ -448,7 +448,7 @@ h1 span { color: var(--accent); }
 .pip:hover { transform: scale(1.4); z-index: 10; }
 
 .pip.pr     { background: var(--pr-color); box-shadow: 0 0 8px rgba(255,107,53,0.5); }
-.pip.ok     { background: #2a3a50; }
+.pip.ok     { background: var(--streak-color); }
 .pip.miss   { background: #1e1e28; border: 1px solid var(--border); }
 .pip.future { background: transparent; border: 1px dashed #2a2a3a; }
 

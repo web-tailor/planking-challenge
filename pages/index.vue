@@ -23,7 +23,7 @@ const { athletes, completedDays, podiumOrder, alltimeOrder, stats } = usePlankDa
         Personal record ★
       </div>
       <div class="legend-item">
-        <div class="legend-pip" style="background:#2a3a50"></div>
+        <div class="legend-pip" style="background:var(--streak-color)"></div>
         Completed
       </div>
       <div class="legend-item">
