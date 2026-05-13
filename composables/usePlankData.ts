@@ -12,6 +12,8 @@ export type Athlete = {
   pbDay: number
   prCount: number
   prStreak: number
+  attendanceStreak: number
+  daysLogged: number
   daysPlayed: number
 }
 
@@ -56,7 +58,13 @@ export function usePlankData() {
       if (played[i].isPR) prStreak++
       else break
     }
-    return { name, days, pb, pbDay, prCount, prStreak, daysPlayed: RAW[name].length }
+    let attendanceStreak = 0
+    for (let i = days.length - 1; i >= 0; i--) {
+      if (!days[i].missed) attendanceStreak++
+      else break
+    }
+    const daysLogged = played.length
+    return { name, days, pb, pbDay, prCount, prStreak, attendanceStreak, daysLogged, daysPlayed: RAW[name].length }
   })
 
   athletes.sort((a, b) => b.prCount - a.prCount || b.pb - a.pb)

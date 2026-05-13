@@ -16,7 +16,7 @@ const { athletes, completedDays, podiumOrder, alltimeOrder, stats } = usePlankDa
 
     <PlankPodium :podium-order="podiumOrder" :athletes="athletes" />
     <PlankAlltimePodium :alltime-order="alltimeOrder" />
-    <PlankLeaderboard :athletes="athletes" :completed-days="completedDays" />
+    <PlankLeaderboard :athletes="athletes" />
     <div class="legend">
       <div class="legend-item">
         <div class="legend-pip" style="background:var(--pr-color);box-shadow:0 0 6px rgba(255,107,53,0.5)"></div>

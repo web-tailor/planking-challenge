@@ -23,8 +23,12 @@ function pipTip(a: Athlete, i: number) {
 }
 
 function prRate(a: Athlete) {
-  const played = a.daysPlayed - a.days.filter(d => d.missed).length
-  return played > 0 ? Math.round(a.prCount / played * 100) : 0
+  return a.daysLogged > 0 ? Math.round(a.prCount / a.daysLogged * 100) : 0
+}
+
+function attendanceLabel(a: Athlete) {
+  if (a.daysLogged === a.daysPlayed && a.daysLogged > 0) return '🏅 Perfect'
+  return `🔥 ${a.daysLogged} days`
 }
 </script>
 
@@ -64,7 +68,7 @@ function prRate(a: Athlete) {
             <div class="mini-stat-val yellow">{{ prRate(a) }}%</div>
           </div>
           <div>
-            <div class="mini-stat-label">Streak</div>
+            <div class="mini-stat-label">PR Streak</div>
             <div class="mini-stat-val blue">🔥{{ a.prStreak }}</div>
           </div>
         </div>
