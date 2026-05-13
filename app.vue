@@ -290,7 +290,7 @@ h1 span { color: var(--accent); }
 
 .lb-header {
   display: grid;
-  grid-template-columns: 1fr 90px 80px 100px 110px;
+  grid-template-columns: 1fr 90px 90px 80px 100px 110px;
   padding: 12px 20px;
   background: var(--surface2);
   border-bottom: 1px solid var(--border);
@@ -303,7 +303,7 @@ h1 span { color: var(--accent); }
 
 .lb-row {
   display: grid;
-  grid-template-columns: 1fr 90px 80px 100px 110px;
+  grid-template-columns: 1fr 90px 90px 80px 100px 110px;
   padding: 14px 20px;
   border-bottom: 1px solid var(--border);
   align-items: center;
@@ -334,21 +334,29 @@ h1 span { color: var(--accent); }
   text-align: center;
   font-family: 'Bebas Neue', sans-serif;
   font-size: 24px;
-  color: var(--pr-color);
+  color: var(--text);
   letter-spacing: 1px;
 }
 
 .lb-streak {
   text-align: center;
   font-size: 11px;
-  color: var(--streak-color);
+  color: var(--text);
   letter-spacing: 1px;
 }
 
 .lb-attendance {
   text-align: center;
   font-size: 11px;
-  color: var(--accent);
+  color: var(--text);
+  letter-spacing: 1px;
+}
+
+.lb-total {
+  text-align: center;
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 18px;
+  color: var(--text);
   letter-spacing: 1px;
 }
 
@@ -356,9 +364,11 @@ h1 span { color: var(--accent); }
   text-align: center;
   font-family: 'Bebas Neue', sans-serif;
   font-size: 18px;
-  color: var(--accent);
+  color: var(--text);
   letter-spacing: 1px;
 }
+
+.lb-best { color: var(--pr-color) !important; }
 .lb-pb sub {
   font-family: 'DM Mono', monospace;
   font-size: 9px;

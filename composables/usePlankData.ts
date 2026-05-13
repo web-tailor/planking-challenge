@@ -15,6 +15,7 @@ export type Athlete = {
   attendanceStreak: number
   daysLogged: number
   daysPlayed: number
+  totalTime: number
 }
 
 // ── ADD NEW WEEKS HERE ── append times to each array. "0:00" = missed day.
@@ -64,7 +65,8 @@ export function usePlankData() {
       else break
     }
     const daysLogged = played.length
-    return { name, days, pb, pbDay, prCount, prStreak, attendanceStreak, daysLogged, daysPlayed: RAW[name].length }
+    const totalTime = played.reduce((s, d) => s + d.sec, 0)
+    return { name, days, pb, pbDay, prCount, prStreak, attendanceStreak, daysLogged, daysPlayed: RAW[name].length, totalTime }
   })
 
   athletes.sort((a, b) => b.prCount - a.prCount || b.pb - a.pb)
