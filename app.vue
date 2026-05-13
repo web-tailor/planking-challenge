@@ -631,7 +631,7 @@ h1 span { color: var(--accent); }
 
 @media(max-width:900px){
   .leaderboard{ overflow-x: auto; }
-  .lb-inner{ min-width: 520px; }
+  .lb-inner{ min-width: 680px; }
   .heatmap-grid{ grid-template-columns:repeat(6,1fr); }
 }
 </style>
