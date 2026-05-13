@@ -50,3 +50,9 @@ All styles live in `app.vue` (global) using CSS custom properties defined in `:r
 | `--bg / --surface / --surface2` | Background layers |
 
 Fonts: `Bebas Neue` (big numbers/headings), `Black Ops One` (names), `DM Mono` (body/labels).
+
+## Adding a new day
+
+When the user provides times for a new day (in any format), append them to the `RAW` object in `composables/usePlankData.ts` — one time string per athlete, in the same order as existing entries. Use `"0:00"` for any missed athlete. Commit with a short message like `"added day 15"`.
+
+To figure out which day number to add next, count the entries in any athlete's array in `RAW` and add 1.
