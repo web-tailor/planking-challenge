@@ -388,7 +388,6 @@ h1 span { color: var(--accent); }
   background: var(--surface);
   border: 1px solid var(--border);
   border-radius: 8px;
-  overflow: hidden;
   animation: fadeUp 0.5s ease both;
 }
 
