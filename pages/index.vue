@@ -7,13 +7,16 @@ const { athletes, completedDays, podiumOrder, alltimeOrder, stats } = usePlankDa
 <template>
   <div class="container">
     <header>
-      <div class="week-label">🏋️ 30-Day Planking Challenge · Week 1</div>
-      <h1>BREAK YOUR<br><span>RECORD</span></h1>
+      <div class="week-label">🏋️ 30-Day Planking Challenge</div>
+      <h1>BREAK YOUR OWN<br><span>RECORD</span></h1>
       <div class="subtitle">
-        Day {{ completedDays }} of {{ TOTAL_DAYS }} · 5 Athletes · Break Your Own Record
+        Day {{ completedDays }} of {{ TOTAL_DAYS }}
       </div>
     </header>
 
+    <PlankPodium :podium-order="podiumOrder" :athletes="athletes" />
+    <PlankAlltimePodium :alltime-order="alltimeOrder" />
+    <PlankLeaderboard :athletes="athletes" :completed-days="completedDays" />
     <div class="legend">
       <div class="legend-item">
         <div class="legend-pip" style="background:var(--pr-color);box-shadow:0 0 6px rgba(255,107,53,0.5)"></div>
@@ -32,10 +35,6 @@ const { athletes, completedDays, podiumOrder, alltimeOrder, stats } = usePlankDa
         Upcoming
       </div>
     </div>
-
-    <PlankPodium :podium-order="podiumOrder" :athletes="athletes" />
-    <PlankAlltimePodium :alltime-order="alltimeOrder" />
-    <PlankLeaderboard :athletes="athletes" :completed-days="completedDays" />
     <PlankHeatmap :athletes="athletes" />
     <PlankDailyCards :athletes="athletes" :completed-days="completedDays" />
     <PlankStats :stats="stats" />
