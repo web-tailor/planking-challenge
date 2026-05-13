@@ -55,8 +55,8 @@ export function usePlankData() {
     const prCount = days.filter(d => d.isPR).length
     const played = days.filter(d => !d.missed)
     let prStreak = 0
-    for (let i = played.length - 1; i >= 0; i--) {
-      if (played[i].isPR) prStreak++
+    for (let i = days.length - 1; i >= 0; i--) {
+      if (days[i].isPR) prStreak++
       else break
     }
     let attendanceStreak = 0

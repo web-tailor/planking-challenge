@@ -23,7 +23,7 @@ function pipTip(a: Athlete, i: number) {
 }
 
 function prRate(a: Athlete) {
-  return a.daysLogged > 0 ? Math.round(a.prCount / a.daysLogged * 100) : 0
+  return a.daysPlayed > 0 ? Math.round(a.prCount / a.daysPlayed * 100) : 0
 }
 
 function attendanceLabel(a: Athlete) {
