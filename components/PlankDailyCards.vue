@@ -16,12 +16,15 @@ type DayRow = {
 
 function getDayRows(dayIndex: number): DayRow[] {
   return props.athletes
+    .filter(a => a.days[dayIndex]?.joined)
     .map(a => ({ ...a.days[dayIndex], name: a.name }))
     .sort((a, b) => b.sec - a.sec)
 }
 
 function maxSec(dayIndex: number): number {
-  return Math.max(...props.athletes.map(a => a.days[dayIndex]?.sec ?? 0))
+  return Math.max(...props.athletes.map(a =>
+    (a.days[dayIndex]?.joined ? a.days[dayIndex].sec : 0) ?? 0
+  ))
 }
 
 function winner(dayIndex: number): DayRow {

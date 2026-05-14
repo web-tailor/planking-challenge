@@ -450,7 +450,8 @@ h1 span { color: var(--accent); }
 .pip.pr     { background: var(--pr-color); box-shadow: 0 0 8px rgba(255,107,53,0.5); }
 .pip.ok     { background: var(--streak-color); }
 .pip.miss   { background: #1e1e28; border: 1px solid var(--border); }
-.pip.future { background: transparent; border: 1px dashed #2a2a3a; }
+.pip.future    { background: transparent; border: 1px dashed #2a2a3a; }
+.pip.pre-join  { background: transparent; border: 1px dashed #1a1a26; opacity: 0.25; }
 
 .pip[data-tip]:hover::after {
   content: attr(data-tip);

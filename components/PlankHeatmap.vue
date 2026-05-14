@@ -9,6 +9,7 @@ defineProps<{
 function pipClass(a: Athlete, i: number) {
   const d = a.days[i]
   if (!d) return 'future'
+  if (!d.joined) return 'pre-join'
   if (d.missed) return 'miss'
   if (d.isPR) return 'pr'
   return 'ok'
@@ -17,6 +18,7 @@ function pipClass(a: Athlete, i: number) {
 function pipTip(a: Athlete, i: number) {
   const d = a.days[i]
   if (!d) return `Day ${i + 1} — upcoming`
+  if (!d.joined) return `Day ${i + 1} — joined later`
   if (d.missed) return `Day ${i + 1} — missed`
   if (d.isPR) return `Day ${i + 1} — ${fmt(d.sec)} ★ PR`
   return `Day ${i + 1} — ${fmt(d.sec)}`
