@@ -23,7 +23,7 @@ export type Athlete = {
 // ── ADD NEW WEEKS HERE ── append times to each athlete's times array. "0:00" = missed day.
 // Late joiners: add joinDay (defaults to 1). e.g. Sofie: { joinDay: 8, times: ['2:30', ...] }
 const RAW: Record<string, { joinDay?: number; times: string[] }> = {
-  Stijn:  { times: ['3:34', '0:00', '4:15', '5:02', '3:30', '6:00', '6:02', '0:00'] },
+  Stijn:  { times: ['3:34', '0:00', '4:15', '5:02', '3:30', '6:00', '6:02', '6:06'] },
   André:  { times: ['4:00', '4:02', '2:45', '4:30', '4:49', '4:20', '5:10', '5:30'] },
   Pierre: { times: ['3:00', '3:30', '3:40', '3:50', '4:00', '4:15', '4:23', '4:30'] },
   Paul:   { times: ['1:49', '3:30', '3:40', '4:00', '5:02', '5:30', '6:03', '6:10'] },
