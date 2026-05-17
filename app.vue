@@ -623,6 +623,24 @@ h1 span { color: var(--accent); }
 }
 .legend-pip { width: 10px; height: 10px; border-radius: 2px; flex-shrink: 0; }
 
+/* ── ROADMAP LINK ── */
+.roadmap-link {
+  display: inline-block;
+  font-size: 11px;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: var(--accent);
+  text-decoration: none;
+  border: 1px solid rgba(232,255,71,0.3);
+  padding: 12px 28px;
+  border-radius: 4px;
+  transition: background 0.15s, border-color 0.15s;
+}
+.roadmap-link:hover {
+  background: rgba(232,255,71,0.08);
+  border-color: rgba(232,255,71,0.6);
+}
+
 /* ── ANIMATIONS ── */
 @keyframes fadeDown  { from{opacity:0;transform:translateY(-20px)} to{opacity:1;transform:translateY(0)} }
 @keyframes fadeUp    { from{opacity:0;transform:translateY(20px)}  to{opacity:1;transform:translateY(0)} }

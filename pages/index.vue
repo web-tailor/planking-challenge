@@ -38,5 +38,9 @@ const { athletes, completedDays, podiumOrder, alltimeOrder, stats } = usePlankDa
     <PlankHeatmap :athletes="athletes" />
     <PlankDailyCards :athletes="athletes" :completed-days="completedDays" />
     <PlankStats :stats="stats" />
+
+    <div style="text-align:center; margin-top: 48px;">
+      <NuxtLink to="/roadmap" class="roadmap-link">View the Road to Glory →</NuxtLink>
+    </div>
   </div>
 </template>
