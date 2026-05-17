@@ -1,6 +1,20 @@
 <script setup lang="ts">
 import { usePlankData, fmt, TOTAL_DAYS } from '~/composables/usePlankData'
 
+useHead({
+  title: '30-Day Planking Challenge — The Road to Glory',
+  meta: [
+    { name: 'description', content: 'Can we plank for 10 or even 15 minutes? See the day-by-day roadmap showing exactly what each athlete needs to hit the big goals.' },
+    { property: 'og:title', content: '30-Day Planking Challenge — The Road to Glory' },
+    { property: 'og:description', content: 'Can we plank for 10 or even 15 minutes? See the day-by-day roadmap showing exactly what each athlete needs to hit the big goals.' },
+    { property: 'og:url', content: 'https://planking.web-tailor.nl/roadmap' },
+    { property: 'og:image', content: 'https://planking.web-tailor.nl/og-image.png' },
+    { name: 'twitter:title', content: '30-Day Planking Challenge — The Road to Glory' },
+    { name: 'twitter:description', content: 'Can we plank for 10 or even 15 minutes? See the day-by-day roadmap showing exactly what each athlete needs to hit the big goals.' },
+    { name: 'twitter:image', content: 'https://planking.web-tailor.nl/og-image.png' },
+  ],
+})
+
 const { athletes, completedDays } = usePlankData()
 
 const GOAL_10 = 10 * 60       // 600s
@@ -255,10 +269,10 @@ const maxSec = GOAL_15
   background: var(--surface);
   border: 1px solid var(--border);
   border-radius: 8px;
-  overflow: hidden;
+  overflow: auto;
 }
 
-.rm-table { width: 100%; }
+.rm-table { min-width: 540px; }
 
 .rm-table-head {
   display: grid;
