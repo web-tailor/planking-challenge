@@ -51,7 +51,7 @@ const maxSec = GOAL_15
 <template>
   <div class="container">
     <header>
-      <div class="week-label">30-Day Planking Challenge</div>
+      <div class="week-label">🏋️ 30-Day Planking Challenge</div>
       <h1>THE ROAD TO<br><span>GLORY</span></h1>
       <div class="subtitle">Day {{ completedDays }} of {{ TOTAL_DAYS }} · {{ daysLeft }} days remaining</div>
     </header>
